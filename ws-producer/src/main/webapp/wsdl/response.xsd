@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://nl.hu.fnt/droneservice/response" elementFormDefault="qualified" targetNamespace="http://nl.hu.fnt/droneservice/response">
+	<element name="droneResponse">
+		<complexType>
+			<sequence>
+				<element name="message" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

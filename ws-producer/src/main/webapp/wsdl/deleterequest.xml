@@ -1,0 +1,3 @@
+<del:deleteRequest xmlns:del="http://nl.hu.fnt/droneservice/deleterequest">
+  <del:DroneID>201</del:DroneID>
+</del:deleteRequest>

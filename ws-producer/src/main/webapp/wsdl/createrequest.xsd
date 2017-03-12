@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://nl.hu.fnt/droneservice/createrequest"
+	elementFormDefault="qualified" targetNamespace="http://nl.hu.fnt/droneservice/createrequest">
+
+	<!-- root element -->
+	<xs:element name="createRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DroneID" type="xs:positiveInteger" />
+				<xs:element name="MotorFrame" type="xs:string" />
+				<xs:element name="Motor" type="xs:string" />
+				<xs:element name="Transmitter" type="xs:string" />
+				<xs:element name="Receiver" type="xs:string" />
+				<xs:element name="Propellers" type="xs:string" />
+				<xs:element name="NumberOfPropellers" type="xs:positiveInteger" />
+				<xs:element name="Batteries" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

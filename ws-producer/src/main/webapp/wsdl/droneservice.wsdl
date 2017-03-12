@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	name="droneService"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:creq="http://nl.hu.fnt/droneservice/createrequest"
+	xmlns:rreq="http://nl.hu.fnt/droneservice/readrequest"
+	xmlns:ureq="http://nl.hu.fnt/droneservice/updaterequest"
+	xmlns:dreq="http://nl.hu.fnt/droneservice/deleterequest"
+	xmlns:rsp="http://nl.hu.fnt/droneservice/response"
+	xmlns:flt="http://nl.hu.fnt/droneservice/fault"
+	xmlns="http://nl.hu.fnt/droneservice/"
+	targetNamespace="http://nl.hu.fnt/droneservice/">
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://nl.hu.fnt/droneservice/createrequest"
+				schemaLocation="createrequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.fnt/droneservice/readrequest"
+						schemaLocation="readrequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.fnt/droneservice/updaterequest"
+						schemaLocation="updaterequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.fnt/droneservice/deleterequest"
+						schemaLocation="deleterequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.fnt/droneservice/response"
+				schemaLocation="response.xsd"/>
+			<xsd:import namespace="http://nl.hu.fnt/droneservice/fault"
+				schemaLocation="fault.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="createrequest">
+		<wsdl:part name="createrequest" element="creq:createRequest"/>
+	</wsdl:message>
+	<wsdl:message name="readrequest">
+		<wsdl:part name="readrequest" element="rreq:readRequest"/>
+	</wsdl:message>
+	<wsdl:message name="updaterequest">
+		<wsdl:part name="updaterequest" element="ureq:updateRequest"/>
+	</wsdl:message>
+	<wsdl:message name="deleterequest">
+		<wsdl:part name="deleterequest" element="dreq:deleteRequest"/>
+	</wsdl:message>
+	<wsdl:message name="response">
+		<wsdl:part name="response" element="rsp:droneResponse"/>
+	</wsdl:message>
+	<wsdl:message name="fault">
+		<wsdl:part name="fault" element="flt:droneFault"/>
+	</wsdl:message>
+	<wsdl:portType name="droneServiceInterface">
+		<wsdl:operation name="createDrone">
+			<wsdl:input message="createrequest"/>
+			<wsdl:output message="response"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="readDrone">
+			<wsdl:input message="readrequest"/>
+			<wsdl:output message="response"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="updateDrone">
+			<wsdl:input message="updaterequest"/>
+			<wsdl:output message="response"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="deleteDrone">
+			<wsdl:input message="deleterequest"/>
+			<wsdl:output message="response"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="droneServiceBinding" type="droneServiceInterface">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="createDrone">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="readDrone">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="updateDrone">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="deleteDrone">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="droneService">
+		<wsdl:port name="WS-Port" binding="droneServiceBinding">
+			<soap:address location="http://localhost:8080/ws-producer/ws-producer"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

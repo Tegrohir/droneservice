@@ -1,0 +1,10 @@
+<upd:updateRequest xmlns:upd="http://nl.hu.fnt/droneservice/updaterequest">
+  <upd:DroneID>201</upd:DroneID>
+  <upd:MotorFrame>string</upd:MotorFrame>
+  <upd:Motor>string</upd:Motor>
+  <upd:Transmitter>string</upd:Transmitter>
+  <upd:Receiver>string</upd:Receiver>
+  <upd:Propellers>string</upd:Propellers>
+  <upd:NumberOfPropellers>201</upd:NumberOfPropellers>
+  <upd:Batteries>string</upd:Batteries>
+</upd:updateRequest>

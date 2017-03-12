@@ -1,0 +1,3 @@
+<res:droneResponse xmlns:res="http://nl.hu.fnt/droneservice/response">
+  <res:message>string</res:message>
+</res:droneResponse>

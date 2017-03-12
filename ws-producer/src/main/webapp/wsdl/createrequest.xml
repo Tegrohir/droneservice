@@ -1,0 +1,10 @@
+<req:createRequest xmlns:req="http://nl.hu.fnt/droneservice/createrequest">
+  <req:DroneID>201</req:DroneID>
+  <req:MotorFrame>string</req:MotorFrame>
+  <req:Motor>string</req:Motor>
+  <req:Transmitter>string</req:Transmitter>
+  <req:Receiver>string</req:Receiver>
+  <req:Propellers>string</req:Propellers>
+  <req:NumberOfPropellers>201</req:NumberOfPropellers>
+  <req:Batteries>string</req:Batteries>
+</req:createRequest>

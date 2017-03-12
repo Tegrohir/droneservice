@@ -1,0 +1,5 @@
+<faul:droneFault xmlns:faul="http://nl.hu.fnt/droneservice/fault">
+  <faul:errorCode>1</faul:errorCode>
+  <!--Optional:-->
+  <faul:message>string</faul:message>
+</faul:droneFault>

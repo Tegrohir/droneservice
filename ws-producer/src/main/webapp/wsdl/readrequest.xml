@@ -1,0 +1,3 @@
+<read:readRequest xmlns:read="http://nl.hu.fnt/droneservice/readrequest">
+  <read:DroneID>201</read:DroneID>
+</read:readRequest>
